@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detailed PRO, Visa & Typing Center Services | Time Link Dubai</title>
+    <!-- Use the modern Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom configuration and styles (keeping animations) -->
     <script>
         tailwind.config = {
             theme: {
@@ -35,6 +37,7 @@
 </head>
 <body class="bg-gray-50 font-sans text-dark-gray">
 
+    <!-- Sticky Navigation Bar (Simplified menu links) -->
     <nav class="sticky top-0 z-50 bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
@@ -60,6 +63,7 @@
 
     <main class="max-w-7xl mx-auto px-4 py-12 space-y-20 lg:space-y-32">
         
+        <!-- INTRO HERO SECTION -->
         <header class="text-center py-10 load-in">
             <h1 class="text-5xl font-extrabold text-primary-blue mb-4">Specialized PRO, Visa, & Typing Services</h1>
             <p class="text-xl text-dark-gray max-w-4xl mx-auto">
@@ -67,6 +71,7 @@
             </p>
         </header>
 
+        <!-- 1. DETAILED PRO & VISA SERVICES -->
         <section id="pro" class="scroll-reveal">
             <h2 class="text-4xl font-bold text-primary-blue mb-8 border-b-2 border-secondary-gold pb-2">PRO & Residency Services</h2>
             
@@ -111,10 +116,12 @@
             </div>
         </section>
 
+        <!-- 2. DETAILED TYPING CENTER SERVICES -->
         <section id="typing" class="scroll-reveal pt-16">
             <h2 class="text-4xl font-bold text-primary-blue mb-8 border-b-2 border-secondary-gold pb-2">Expert Typing & Legal Documentation</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
+                <!-- Column 1: Core Typing -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-blue">
                     <h3 class="text-2xl font-bold mb-3">Visa Typing & IDs</h3>
                     <ul class="list-disc pl-5 space-y-2 text-dark-gray">
@@ -125,6 +132,7 @@
                     </ul>
                 </div>
                 
+                <!-- Column 2: Legal & Real Estate -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-blue">
                     <h3 class="text-2xl font-bold mb-3">Legal & Attestation</h3>
                     <ul class="list-disc pl-5 space-y-2 text-dark-gray">
@@ -135,6 +143,7 @@
                     </ul>
                 </div>
 
+                <!-- Column 3: Business & Labour -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary-blue">
                     <h3 class="text-2xl font-bold mb-3">Business & Labour</h3>
                     <ul class="list-disc pl-5 space-y-2 text-dark-gray">
@@ -147,6 +156,7 @@
             </div>
         </section>
         
+        <!-- 3. DETAILED BUSINESS SETUP SERVICES -->
         <section id="business" class="scroll-reveal pt-16">
             <h2 class="text-4xl font-bold text-primary-blue mb-8 border-b-2 border-secondary-gold pb-2">Business Setup Consultation</h2>
             
@@ -173,19 +183,22 @@
             </div>
         </section>
         
+        <!-- FINAL CONTACT FORM SECTION -->
         <section id="contact-form" class="pt-16 scroll-reveal">
             <h2 class="text-4xl font-bold text-center text-primary-blue mb-8">Get a Custom Quote Today</h2>
             <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl max-w-2xl mx-auto border-t-4 border-secondary-gold">
                 <p class="text-lg text-center text-dark-gray mb-6">Tell us what you need assistance with, and our team will prepare your personalized quote within 2 business hours.</p>
                 
-                <form action="https://formsubmit.co/Timelinkx5@gmail.com" method="POST" class="space-y-4">
-                    <input type="hidden" name="_next" value="https://www.timelink.ae/services-pro.html?success=true"> 
-                    <input type="hidden" name="_subject" value="SERVICE PAGE LEAD: Detailed Service Inquiry">
+                <!-- NETLIFY FORM INTEGRATION - Detailed Service Inquiry Form -->
+                <form name="DetailedInquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/services-pro.html?success=true" class="space-y-4">
+                    <!-- Honeypot for spam protection (hidden) -->
+                    <input type="hidden" name="form-name" value="DetailedInquiry" />
+                    <div style="display:none;"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></div>
 
-                    <input type="text" name="Full Name" placeholder="Full Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
-                    <input type="email" name="Email Address" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
-                    <input type="tel" name="Phone / WhatsApp" placeholder="Phone / WhatsApp (e.g. +971 50 123 4567)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
-                    <textarea name="Message" placeholder="Briefly describe the service you require (e.g., 'Family visa renewal' or 'New mainland license')." rows="3" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold"></textarea>
+                    <input type="text" name="Full_Name" placeholder="Full Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
+                    <input type="email" name="Email_Address" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
+                    <input type="tel" name="Phone_WhatsApp" placeholder="Phone / WhatsApp (e.g. +971 50 123 4567)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
+                    <textarea name="Service_Required_Details" placeholder="Briefly describe the service you require (e.g., 'Family visa renewal' or 'New mainland license')." rows="3" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold"></textarea>
                     
                     <button type="submit" class="w-full p-3 font-semibold text-lg bg-secondary-gold text-primary-blue rounded-lg hover:bg-yellow-500 transition cta-button">
                         Send Inquiry
@@ -196,6 +209,7 @@
 
     </main>
 
+    <!-- Footer (Same as index.html, linking back to home) -->
     <footer class="bg-dark-gray text-white pt-12 pb-6 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-700 pb-8 scroll-reveal">
@@ -208,6 +222,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript for mobile menu toggle AND scroll animations -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuButton = document.getElementById('mobile-menu-button');
