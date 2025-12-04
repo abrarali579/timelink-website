@@ -101,7 +101,8 @@
                     <h2 class="text-2xl font-bold text-primary-blue mb-4 text-center">Quick Setup Inquiry</h2>
                     
                     <!-- NETLIFY FORM INTEGRATION - Quick Inquiry Form (Functional) -->
-                    <form name="QuickInquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?success=true" class="space-y-4">
+                    <form name="QuickInquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success" class="space-y-4">
+                        <!-- ACTION points to the new /success.html page -->
                         <!-- Honeypot for spam protection (hidden) -->
                         <input type="hidden" name="form-name" value="QuickInquiry" />
                         <div style="display:none;"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></div>
