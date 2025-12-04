@@ -82,7 +82,8 @@
 
     <main class="space-y-20 lg:space-y-32">
         <!-- 1. HERO SECTION & PRIMARY CTA -->
-        <section class="relative pt-16 md:pt-24 bg-accent-light" id="home">
+        <!-- Adjusted pt-16 to pt-12 and added pb-16 to guarantee space for the form -->
+        <section class="relative pt-12 md:pt-24 pb-16 bg-accent-light" id="home">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 text-center lg:text-left py-10 lg:py-20 z-10">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-primary-blue mb-4 hero-animate-1">
@@ -97,7 +98,8 @@
                     </a>
                 </div>
                 
-                <div class="lg:w-1/2 w-full p-6 lg:p-10 bg-white rounded-2xl shadow-2xl transform lg:translate-y-10 scroll-reveal">
+                <!-- Adjusted classes for better mobile compatibility -->
+                <div class="lg:w-1/2 w-full p-6 lg:p-10 bg-white rounded-2xl shadow-2xl transform lg:mt-10 lg:mb-10 scroll-reveal">
                     <h2 class="text-2xl font-bold text-primary-blue mb-4 text-center">Quick Setup Inquiry</h2>
                     
                     <!-- NETLIFY FORM INTEGRATION - Quick Inquiry Form (Functional) -->
@@ -123,6 +125,7 @@
                     </form>
                 </div>
             </div>
+            <!-- The wave SVG creates a clean transition to the white background below -->
             <svg class="absolute bottom-0 w-full h-20 sm:h-32" preserveAspectRatio="none" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,37.3C672,21,768,11,864,16C960,21,1056,32,1152,42.7C1248,53,1344,64,1392,69.3L1440,75L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="#FFFFFF"></path>
             </svg>
