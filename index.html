@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Time Link Business Setup Services LLC - PRO & Typing Center in Dubai</title>
+    <!-- Load Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom configuration for branding and font -->
     <script>
         tailwind.config = {
             theme: {
@@ -23,11 +25,23 @@
         }
     </script>
     <style>
+        /* Base Styles for Smoothness and Interactivity */
         html { scroll-behavior: smooth; }
         .cta-button { transition: all 0.3s ease; }
         .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(255, 195, 0, 0.5); }
-        .scroll-reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-        .scroll-reveal.is-visible { opacity: 1; transform: translateY(0); }
+        
+        /* SCROLL REVEAL ANIMATIONS */
+        .scroll-reveal { 
+            opacity: 0; 
+            transform: translateY(30px); 
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+        }
+        .scroll-reveal.is-visible { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+        
+        /* HERO INITIAL FADE-IN */
         @keyframes fadeInSlide {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -39,21 +53,25 @@
 </head>
 <body class="bg-white font-sans text-dark-gray">
 
+    <!-- Sticky Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <a href="#" class="flex-shrink-0 text-xl font-bold text-primary-blue tracking-wide">Time Link</a>
                 <div class="hidden md:flex space-x-8 items-center">
+                    <!-- Links to the dedicated services page -->
                     <a href="services-pro.html" class="text-dark-gray font-bold hover:text-secondary-gold transition duration-200">Our Services</a>
                     <a href="#packages" class="text-dark-gray hover:text-secondary-gold transition duration-200">Packages</a>
                     <a href="#why-us" class="text-dark-gray hover:text-secondary-gold transition duration-200">Why Choose Us</a>
                     <a href="#contact" class="px-4 py-2 bg-secondary-gold text-primary-blue font-semibold rounded-full hover:bg-yellow-500 transition cta-button">Free Consultation</a>
                 </div>
+                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-primary-blue hover:text-secondary-gold focus:outline-none">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
         </div>
+        <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-4 z-40">
             <a href="services-pro.html" class="block px-4 py-2 text-dark-gray hover:bg-gray-100">Our Services</a>
             <a href="#packages" class="block px-4 py-2 text-dark-gray hover:bg-gray-100">Pricing Packages</a>
@@ -63,6 +81,7 @@
     </nav>
 
     <main class="space-y-20 lg:space-y-32">
+        <!-- 1. HERO SECTION & PRIMARY CTA -->
         <section class="relative pt-16 md:pt-24 bg-accent-light" id="home">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 text-center lg:text-left py-10 lg:py-20 z-10">
@@ -81,13 +100,15 @@
                 <div class="lg:w-1/2 w-full p-6 lg:p-10 bg-white rounded-2xl shadow-2xl transform lg:translate-y-10 scroll-reveal">
                     <h2 class="text-2xl font-bold text-primary-blue mb-4 text-center">Quick Setup Inquiry</h2>
                     
-                    <form action="https://formsubmit.co/Timelinkx5@gmail.com" method="POST" class="space-y-4">
-                        <input type="hidden" name="_next" value="https://www.timelink.ae/?success=true"> 
-                        <input type="hidden" name="_subject" value="NEW LEAD: Business Setup Inquiry from Timelink Website">
+                    <!-- NETLIFY FORM INTEGRATION - Quick Inquiry Form (Functional) -->
+                    <form name="QuickInquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?success=true" class="space-y-4">
+                        <!-- Honeypot for spam protection (hidden) -->
+                        <input type="hidden" name="form-name" value="QuickInquiry" />
+                        <div style="display:none;"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></div>
 
-                        <input type="text" name="Full Name" placeholder="Full Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
-                        <input type="email" name="Email Address" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
-                        <input type="tel" name="Phone / WhatsApp" placeholder="Phone / WhatsApp (e.g. +971 50 123 4567)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
+                        <input type="text" name="Full_Name" placeholder="Full Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
+                        <input type="email" name="Email_Address" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
+                        <input type="tel" name="Phone_WhatsApp" placeholder="Phone / WhatsApp (e.g. +971 50 123 4567)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
                         <select name="Interest" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
                             <option value="">I am interested in...</option>
                             <option value="New Business Setup (Mainland/Freezone)">New Business Setup (Mainland/Freezone)</option>
@@ -106,6 +127,7 @@
             </svg>
         </section>
 
+        <!-- 2. CORE STATS / SOCIAL PROOF -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 mb-16 lg:mb-20">
             <h2 class="sr-only">Our Impact</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 scroll-reveal">
@@ -116,6 +138,7 @@
             </div>
         </section>
 
+        <!-- 3. PRIMARY SERVICE CTA (Redirects to new detailed page) -->
         <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <h2 class="text-4xl font-bold text-center text-primary-blue mb-4 scroll-reveal">Our Core Areas of Expertise</h2>
             <p class="text-xl text-center text-dark-gray max-w-4xl mx-auto mb-12 scroll-reveal">
@@ -158,6 +181,7 @@
             </div>
         </section>
 
+        <!-- 4. WHY TIME LINK? (Process & Value Proposition) -->
         <section id="why-us" class="bg-primary-blue py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-bold text-center text-white mb-4 scroll-reveal">The Time Link Advantage</h2>
@@ -178,6 +202,7 @@
             </div>
         </section>
 
+        <!-- 5. FEATURED PACKAGES -->
         <section id="packages" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <h2 class="text-4xl font-bold text-center text-primary-blue mb-4 scroll-reveal">Our Most Popular Packages</h2>
             <p class="text-xl text-center text-dark-gray max-w-4xl mx-auto mb-12 scroll-reveal">
@@ -225,6 +250,7 @@
             <p class="text-center text-sm text-gray-500 mt-8 scroll-reveal">*Prices are estimated and subject to change based on government fees and business activity. Contact us for a final quote.</p>
         </section>
 
+        <!-- 6. CLIENT TESTIMONIALS -->
         <section id="testimonials" class="bg-accent-light py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl font-bold text-center text-primary-blue mb-12 scroll-reveal">Hear From Our Satisfied Clients</h2>
@@ -236,6 +262,7 @@
             </div>
         </section>
 
+        <!-- 7. FINAL CTA / CONTACT SECTION -->
         <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <div class="bg-primary-blue text-white p-8 md:p-12 rounded-2xl shadow-2xl text-center scroll-reveal">
                 <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Start Your Business in Dubai?</h2>
@@ -249,6 +276,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="bg-dark-gray text-white pt-12 pb-6 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-700 pb-8 scroll-reveal">
@@ -261,6 +289,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript for mobile menu toggle AND scroll animations -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuButton = document.getElementById('mobile-menu-button');
@@ -270,6 +299,7 @@
             const mobileLinks = mobileMenu.querySelectorAll('a');
             mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
 
+            // --- Scroll Animation Logic (Intersection Observer) ---
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
