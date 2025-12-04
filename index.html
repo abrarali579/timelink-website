@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Link Business Setup Services LLC - PRO & Typing Center in Dubai</title>
+    <!-- Use the modern Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom configuration for Inter font and blue/gray theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#0A2540',
+                        'secondary-gold': '#FFC300',
+                        'accent-light': '#E6F0FF',
+                        'dark-gray': '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ensure smooth scrolling for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for the CTA button */
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 195, 0, 0.5);
+        }
+        
+        /* --- CORE ANIMATION STYLES --- */
+        /* Base class for elements waiting to be revealed on scroll */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        /* Class applied when element is in viewport */
+        .scroll-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Headline Fade-in (Triggers immediately on load) */
+        @keyframes fadeInSlide {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hero-animate-1 {
+            animation: fadeInSlide 1s ease-out 0.5s both;
+        }
+        .hero-animate-2 {
+            animation: fadeInSlide 1s ease-out 0.8s both;
+        }
+        .hero-animate-3 {
+            animation: fadeInSlide 1s ease-out 1.1s both;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans text-dark-gray">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Company Name -->
+                <a href="#" class="flex-shrink-0 text-xl font-bold text-primary-blue tracking-wide">
+                    Time Link
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#services" class="text-dark-gray hover:text-secondary-gold transition duration-200">Services</a>
+                    <a href="#packages" class="text-dark-gray hover:text-secondary-gold transition duration-200">Packages</a>
+                    <a href="#why-us" class="text-dark-gray hover:text-secondary-gold transition duration-200">Why Choose Us</a>
+                    <a href="#testimonials" class="text-dark-gray hover:text-secondary-gold transition duration-200">Testimonials</a>
+                    <a href="#contact" class="px-4 py-2 bg-secondary-gold text-primary-blue font-semibold rounded-full hover:bg-yellow-500 transition cta-button">
+                        <span class="hidden sm:inline">Free Consultation</span>
+                        <span class="sm:hidden">Consult</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button (Hamburger) - Implementation required for JS toggle, simplified here -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-primary-blue hover:text-secondary-gold focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Drawer (Hidden by default, shown by JS) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-4 z-40">
+            <a href="#services" class="block px-4 py-2 text-dark-gray hover:bg-gray-100">Our Services</a>
+            <a href="#packages" class="block px-4 py-2 text-dark-gray hover:bg-gray-100">Pricing Packages</a>
+            <a href="#why-us" class="block px-4 py-2 text-dark-gray hover:bg-gray-100">Why Time Link</a>
+            <a href="#testimonials" class="block px-4 py-2 text-dark-gray hover:bg-gray-100">Client Stories</a>
+            <a href="#contact" class="block px-4 py-2 bg-secondary-gold text-primary-blue font-semibold mt-2 mx-4 rounded-lg text-center">Book Your Call</a>
+        </div>
+    </nav>
+
+    <main class="space-y-20 lg:space-y-32">
+        <!-- 1. HERO SECTION & PRIMARY CTA -->
+        <section class="relative pt-16 md:pt-24 bg-accent-light" id="home">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+                
+                <!-- Left Content: Headline and USP -->
+                <div class="lg:w-1/2 text-center lg:text-left py-10 lg:py-20 z-10">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-primary-blue mb-4 hero-animate-1">
+                        <span class="block">Your Future Starts Here:</span>
+                        UAE Company Formation Simplified
+                    </h1>
+                    <p class="text-xl text-dark-gray mb-8 lg:pr-10 hero-animate-2">
+                        Over 10 years of expertise in Business Setup, PRO Services, and Expert Typing in Dubai. Get your trade license and visa faster with Time Link.
+                    </p>
+                    
+                    <!-- Primary CTA -->
+                    <a href="#contact" class="inline-block px-10 py-4 text-lg font-bold bg-primary-blue text-white rounded-full shadow-lg hover:bg-gray-800 transition cta-button mb-6 lg:mb-0 hero-animate-3">
+                        Book Your FREE 30-Min Consultation
+                    </a>
+                </div>
+                
+                <!-- Right Content: Trust Image/Form Mockup -->
+                <div class="lg:w-1/2 w-full p-6 lg:p-10 bg-white rounded-2xl shadow-2xl transform lg:translate-y-10 scroll-reveal">
+                    <h2 class="text-2xl font-bold text-primary-blue mb-4 text-center">Quick Setup Inquiry</h2>
+                    <form action="#" method="POST" class="space-y-4">
+                        <input type="text" placeholder="Full Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
+                        <input type="email" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
+                        <input type="tel" placeholder="Phone / WhatsApp (e.g. +971 50 123 4567)" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
+                            <option value="">I am interested in...</option>
+                            <option value="business_setup">New Business Setup (Mainland/Freezone)</option>
+                            <option value="visa_services">Visa & PRO Services</option>
+                            <option value="typing_center">General Typing Center Services</option>
+                            <option value="other">Other Services</option>
+                        </select>
+                        <button type="submit" class="w-full p-3 font-semibold text-lg bg-secondary-gold text-primary-blue rounded-lg hover:bg-yellow-500 transition cta-button">
+                            Get Your Custom Proposal
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- Background element for wave effect (optional, but professional) -->
+            <svg class="absolute bottom-0 w-full h-20 sm:h-32" preserveAspectRatio="none" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,37.3C672,21,768,11,864,16C960,21,1056,32,1152,42.7C1248,53,1344,64,1392,69.3L1440,75L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="#FFFFFF"></path>
+            </svg>
+        </section>
+
+        <!-- 2. CORE STATS / SOCIAL PROOF -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 mb-16 lg:mb-20">
+            <h2 class="sr-only">Our Impact</h2>
+            <!-- Apply scroll-reveal to the main block for animation -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 scroll-reveal">
+                <!-- Stat 1 (Client Served) -->
+                <div class="text-center p-3">
+                    <h3 class="text-3xl sm:text-5xl font-extrabold text-secondary-gold">3,200+</h3>
+                    <p class="mt-1 text-sm sm:text-base font-semibold text-primary-blue">Clients Served</p>
+                </div>
+                <!-- Stat 2 (Businesses Formed) -->
+                <div class="text-center p-3">
+                    <h3 class="text-3xl sm:text-5xl font-extrabold text-secondary-gold">10+</h3>
+                    <p class="mt-1 text-sm sm:text-base font-semibold text-primary-blue">Years of Experience</p>
+                </div>
+                <!-- Stat 3 (Documents Processed) -->
+                <div class="text-center p-3">
+                    <h3 class="text-3xl sm:text-5xl font-extrabold text-secondary-gold">5,000+</h3>
+                    <p class="mt-1 text-sm sm:text-base font-semibold text-primary-blue">Documents Processed</p>
+                </div>
+                <!-- Stat 4 (New - Success Rate) -->
+                <div class="text-center p-3">
+                    <h3 class="text-3xl sm:text-5xl font-extrabold text-secondary-gold">99%</h3>
+                    <p class="mt-1 text-sm sm:text-base font-semibold text-primary-blue">Approval Success Rate</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. OUR COMPREHENSIVE SERVICES (Detailed) -->
+        <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <h2 class="text-4xl font-bold text-center text-primary-blue mb-4 scroll-reveal">Our Comprehensive Services</h2>
+            <p class="text-xl text-center text-dark-gray max-w-4xl mx-auto mb-12 scroll-reveal">
+                Time Link is your one-stop solution for all government, legal, and administrative needs in Dubai.
+            </p>
+
+            <!-- Use data-stagger-reveal to enable staggered animation on children -->
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" data-stagger-reveal>
+                <!-- Service Card 1: Business Setup -->
+                <div class="bg-accent-light p-8 rounded-2xl shadow-lg border border-primary-blue/20 hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-secondary-gold mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 4V2m-2 4h4m-4 0h4m-4 0v4m4-4V2m-2 4h-4m2 4v4m-2-4h4m-4 0h4m-4 0v4m4-4V2m-2 4h4m-4 0h4m-4 0v4m4-4V2m-2 4h4m-4 0h4m-4 0v4m4-4V2"></path></svg>
+                        <h3 class="text-2xl font-bold text-primary-blue">Business Setup & Licensing</h3>
+                    </div>
+                    <p class="text-dark-gray mb-4">We simplify company registration in Mainland, Free Zone, and Offshore jurisdictions. Includes trade license application and corporate bank account opening support.</p>
+                    <ul class="list-disc pl-5 text-sm space-y-1 text-gray-600">
+                        <li>LLC & Sole Proprietorship Formation</li>
+                        <li>Local Sponsor Arrangement</li>
+                        <li>Commercial & Professional Licenses</li>
+                    </ul>
+                </div>
+                
+                <!-- Service Card 2: Visa & PRO Services -->
+                <div class="bg-accent-light p-8 rounded-2xl shadow-lg border border-primary-blue/20 hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-secondary-gold mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 1.657-1.343 3-3 3S6 12.657 6 11s1.343-3 3-3 3 1.343 3 3zM21 21c-1.333-1.333-3-2-6-2s-4.667.667-6 2m12-4c-1.333-1.333-3-2-6-2s-4.667.667-6 2M12 4a3 3 0 100 6 3 3 0 000-6z"></path></svg>
+                        <h3 class="text-2xl font-bold text-primary-blue">Visa & PRO Services</h3>
+                    </div>
+                    <p class="text-dark-gray mb-4">Our dedicated Public Relations Officers (PROs) handle all governmental formalities, documentation, and submissions on your behalf for a hassle-free experience.</p>
+                    <ul class="list-disc pl-5 text-sm space-y-1 text-gray-600">
+                        <li>Investor & Employment Visas</li>
+                        <li>Family Visa Processing</li>
+                        <li>Golden Visa Assistance</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3: Typing Center & Legal -->
+                <div class="bg-accent-light p-8 rounded-2xl shadow-lg border border-primary-blue/20 hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-secondary-gold mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L19.25 7.5l-2.5-2.5L7.25 14.5m1.5 2L5 21h4.5l8.75-8.75-2.5-2.5z"></path></svg>
+                        <h3 class="text-2xl font-bold text-primary-blue">Typing, MOFA & Legal</h3>
+                    </div>
+                    <p class="text-dark-gray mb-4">Fast, accurate typing services for all official documents, including visa applications, labour contracts, and legal documentation required by UAE authorities.</p>
+                    <ul class="list-disc pl-5 text-sm space-y-1 text-gray-600">
+                        <li>Emirates ID & Medical Typing</li>
+                        <li>MOFA Attestation & Legal Translation</li>
+                        <li>Labour/MOHRE Submissions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 scroll-reveal">
+                <a href="#contact" class="inline-block px-8 py-3 text-lg font-semibold bg-secondary-gold text-primary-blue rounded-full hover:bg-yellow-500 transition cta-button">
+                    View All 15+ Specialized Services
+                </a>
+            </div>
+        </section>
+
+        <!-- 4. WHY TIME LINK? (Process & Value Proposition) -->
+        <section id="why-us" class="bg-primary-blue py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-white mb-4 scroll-reveal">The Time Link Advantage</h2>
+                <p class="text-xl text-center text-gray-300 max-w-4xl mx-auto mb-16 scroll-reveal">
+                    Our simple, transparent 3-step process ensures you launch your business efficiently and correctly the first time.
+                </p>
+
+                <!-- Process Steps -->
+                <div class="grid md:grid-cols-3 gap-12" data-stagger-reveal>
+                    <!-- Step 1: Consult & Plan -->
+                    <div class="text-center text-white">
+                        <div class="relative inline-block mb-4">
+                            <span class="text-6xl font-extrabold text-secondary-gold block leading-none">01</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Consult & Plan</h3>
+                        <p class="text-gray-300">Book your free call. Our expert advisors will determine the best jurisdiction (Mainland/Freezone) and license activity tailored to your business needs and budget.</p>
+                    </div>
+                    <!-- Step 2: Execute & Document -->
+                    <div class="text-center text-white">
+                        <div class="relative inline-block mb-4">
+                            <span class="text-6xl font-extrabold text-secondary-gold block leading-none">02</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Execute & Document</h3>
+                        <p class="text-gray-300">We handle all government submissions, legal typing, and PRO requirements. We prepare and submit all documentation to relevant authorities (DED, MoHRE, Courts).</p>
+                    </div>
+                    <!-- Step 3: Launch & Support -->
+                    <div class="text-center text-white">
+                        <div class="relative inline-block mb-4">
+                            <span class="text-6xl font-extrabold text-secondary-gold block leading-none">03</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Launch & Support</h3>
+                        <p class="text-gray-300">Receive your Trade License, process your visa, and get assistance with corporate banking. Your business is legally ready to operate.</p>
+                    </div>
+                </div>
+
+                <!-- Secondary Value Points -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center mt-16 text-white" data-stagger-reveal>
+                    <div class="p-4 border border-secondary-gold/50 rounded-lg">
+                        <h4 class="font-bold text-xl mb-1 text-secondary-gold">Transparency</h4>
+                        <p class="text-sm text-gray-300">No hidden fees, only clear, upfront pricing.</p>
+                    </div>
+                    <div class="p-4 border border-secondary-gold/50 rounded-lg">
+                        <h4 class="font-bold text-xl mb-1 text-secondary-gold">Localization</h4>
+                        <p class="text-sm text-gray-300">Deep local expertise in Dubai's government centers.</p>
+                    </div>
+                    <div class="p-4 border border-secondary-gold/50 rounded-lg">
+                        <h4 class="font-bold text-xl mb-1 text-secondary-gold">Speed & Accuracy</h4>
+                        <p class="text-sm text-gray-300">Dedicated staff for fast and correct document typing.</p>
+                    </div>
+                    <div class="p-4 border border-secondary-gold/50 rounded-lg">
+                        <h4 class="font-bold text-xl mb-1 text-secondary-gold">PRO Focus</h4>
+                        <p class="text-sm text-gray-300">Core expertise in visa, labor, and ID processing.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. FEATURED PACKAGES (Similar to Competitor) -->
+        <section id="packages" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <h2 class="text-4xl font-bold text-center text-primary-blue mb-4 scroll-reveal">Our Most Popular Packages</h2>
+            <p class="text-xl text-center text-dark-gray max-w-4xl mx-auto mb-12 scroll-reveal">
+                Cost-effective solutions for entrepreneurs. Save time and money with our bundled services.
+            </p>
+
+            <div class="grid gap-8 md:grid-cols-3" data-stagger-reveal>
+                
+                <!-- Package 1: Starter Free Zone -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl shadow-lg p-8 flex flex-col hover:border-secondary-gold transition duration-300">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-2">Free Zone Starter</h3>
+                    <p class="text-sm text-gray-500 mb-4">Ideal for service-based businesses & freelancers.</p>
+                    <div class="my-4">
+                        <span class="text-4xl font-extrabold text-primary-blue">AED 15,999</span>
+                        <span class="text-lg text-gray-500"> / year*</span>
+                    </div>
+                    <ul class="space-y-3 text-dark-gray flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>100% Foreign Ownership</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>1 Trade License Activity</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Flexi-Desk Facility</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>1 Investor/Partner Visa Quota</li>
+                        <li class="flex items-center text-gray-400"><svg class="w-5 h-5 text-gray-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>Corporate Bank Account Support</li>
+                    </ul>
+                    <a href="#contact" class="mt-8 py-3 text-center font-bold bg-primary-blue text-white rounded-lg hover:bg-gray-800 transition cta-button">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Package 2: Mainland PRO Ultimate (Featured) -->
+                <div class="bg-primary-blue border-4 border-secondary-gold rounded-2xl shadow-2xl p-8 flex flex-col transform scale-105 z-10">
+                    <span class="bg-secondary-gold text-primary-blue font-bold text-xs uppercase px-3 py-1 rounded-full absolute -top-3 left-1/2 transform -translate-x-1/2">Most Popular</span>
+                    <h3 class="text-3xl font-bold text-white mb-2">Mainland PRO Ultimate</h3>
+                    <p class="text-sm text-gray-300 mb-4">Complete package including local agent and full PRO support.</p>
+                    <div class="my-4">
+                        <span class="text-4xl font-extrabold text-secondary-gold">AED 19,900</span>
+                        <span class="text-lg text-white"> / year*</span>
+                    </div>
+                    <ul class="space-y-3 text-white flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-secondary-gold mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>100% Operational Freedom</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-secondary-gold mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Dedicated Local Agent (LSA)</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-secondary-gold mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Full PRO Service Coverage</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-secondary-gold mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>2 Investor Visa Quotas Included</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-secondary-gold mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>FREE VAT & Tax Consultation</li>
+                    </ul>
+                    <a href="#contact" class="mt-8 py-3 text-center font-bold bg-secondary-gold text-primary-blue rounded-lg hover:bg-yellow-500 transition cta-button">
+                        Enquire Now
+                    </a>
+                </div>
+
+                <!-- Package 3: PRO & Typing Only -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl shadow-lg p-8 flex flex-col hover:border-secondary-gold transition duration-300">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-2">PRO & Typing Focus</h3>
+                    <p class="text-sm text-gray-500 mb-4">For existing companies needing external PRO/typing support.</p>
+                    <div class="my-4">
+                        <span class="text-4xl font-extrabold text-primary-blue">AED 7,500</span>
+                        <span class="text-lg text-gray-500"> / year*</span>
+                    </div>
+                    <ul class="space-y-3 text-dark-gray flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Unlimited Document Typing</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Visa/Labour/EID Renewals</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Ejari & Tenancy Contract Support</li>
+                        <li class="flex items-center text-gray-400"><svg class="w-5 h-5 text-gray-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>New License Applications</li>
+                        <li class="flex items-center text-gray-400"><svg class="w-5 h-5 text-gray-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>Local Sponsor Setup</li>
+                    </ul>
+                    <a href="#contact" class="mt-8 py-3 text-center font-bold bg-primary-blue text-white rounded-lg hover:bg-gray-800 transition cta-button">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-8 scroll-reveal">*Prices are estimated and subject to change based on government fees and business activity. Contact us for a final quote.</p>
+        </section>
+
+        <!-- 6. CLIENT TESTIMONIALS (Styled for Authority) -->
+        <section id="testimonials" class="bg-accent-light py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-primary-blue mb-12 scroll-reveal">Hear From Our Satisfied Clients</h2>
+                <div class="grid gap-8 md:grid-cols-3" data-stagger-reveal>
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-secondary-gold">
+                        <svg class="w-8 h-8 text-secondary-gold mb-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 8a4 4 0 018 0v1h1a2 2 0 012 2v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5a2 2 0 012-2h1V8z"></path><path fill-rule="evenodd" d="M5.49 10a4 4 0 013-3.72V6a1 1 0 00-1-1H7a1 1 0 00-1 1v1h-.51a4 4 0 01-1 3zm7.02 0a4 4 0 01-1-3.72V6a1 1 0 011-1h1a1 1 0 011 1v1h.51a4 4 0 011 3z" clip-rule="evenodd"></path></svg>
+                        <p class="italic text-lg text-dark-gray mb-4">"Amazing service! Got my trade license and visa processed without any hassle. The PRO team is extremely knowledgeable and efficient. Highly recommend Time Link!"</p>
+                        <p class="font-bold text-primary-blue">– Aisha Khan, <span class="text-sm font-normal text-gray-500">New Business Owner</span></p>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-secondary-gold">
+                        <svg class="w-8 h-8 text-secondary-gold mb-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 8a4 4 0 018 0v1h1a2 2 0 012 2v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5a2 2 0 012-2h1V8z"></path><path fill-rule="evenodd" d="M5.49 10a4 4 0 013-3.72V6a1 1 0 00-1-1H7a1 1 0 00-1 1v1h-.51a4 4 0 01-1 3zm7.02 0a4 4 0 01-1-3.72V6a1 1 0 011-1h1a1 1 0 011 1v1h.51a4 4 0 011 3z" clip-rule="evenodd"></path></svg>
+                        <p class="italic text-lg text-dark-gray mb-4">"Their typing services for my family visa were quick and absolutely correct, saving me multiple trips to the center. They truly are a one-stop solution."</p>
+                        <p class="font-bold text-primary-blue">– Mohammed Irfan, <span class="text-sm font-normal text-gray-500">UAE Resident</span></p>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-xl border-l-4 border-secondary-gold">
+                        <svg class="w-8 h-8 text-secondary-gold mb-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 8a4 4 0 018 0v1h1a2 2 0 012 2v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5a2 2 0 012-2h1V8z"></path><path fill-rule="evenodd" d="M5.49 10a4 4 0 013-3.72V6a1 1 0 00-1-1H7a1 1 0 00-1 1v1h-.51a4 4 0 01-1 3zm7.02 0a4 4 0 01-1-3.72V6a1 1 0 011-1h1a1 1 0 011 1v1h.51a4 4 0 011 3z" clip-rule="evenodd"></path></svg>
+                        <p class="italic text-lg text-dark-gray mb-4">"As a startup, we needed fast and cheap PRO support. Time Link delivered on time and below budget. Their Ejari registration service was flawless."</p>
+                        <p class="font-bold text-primary-blue">– Sara Ahmed, <span class="text-sm font-normal text-gray-500">Operations Manager</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FINAL CTA / CONTACT SECTION -->
+        <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <!-- Apply scroll-reveal to the main block for animation -->
+            <div class="bg-primary-blue text-white p-8 md:p-12 rounded-2xl shadow-2xl text-center scroll-reveal">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Start Your Business in Dubai?</h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    Stop wasting time on paperwork. Contact the Time Link experts for reliable PRO and business setup services today.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="tel:+971524852529" class="w-full sm:w-auto px-8 py-3 text-lg font-bold bg-secondary-gold text-primary-blue rounded-full hover:bg-yellow-500 transition cta-button">
+                        <span class="inline-block mr-2 text-2xl">📞</span> Call Now: +971 52 485 2529
+                    </a>
+                    <a href="https://wa.me/971524852529" target="_blank" class="w-full sm:w-auto px-8 py-3 text-lg font-bold border-2 border-white text-white rounded-full hover:bg-white hover:text-primary-blue transition cta-button">
+                        <span class="inline-block mr-2 text-2xl">💬</span> WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-gray text-white pt-12 pb-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-gray-700 pb-8 scroll-reveal">
+                
+                <!-- Company Info -->
+                <div class="col-span-2 md:col-span-2">
+                    <h3 class="text-2xl font-bold text-secondary-gold mb-3">Time Link LLC</h3>
+                    <p class="text-gray-400 text-sm">Your reliable partner for business setup, PRO, and government documentation in the UAE.</p>
+                    <div class="mt-4 space-y-2">
+                        <p class="flex items-start text-sm">
+                            <span class="text-secondary-gold mr-2 text-xl">📍</span>
+                            England Cluster X05, Shop 06, International City, Dubai, UAE
+                        </p>
+                        <p class="flex items-center text-sm">
+                            <span class="text-secondary-gold mr-2 text-xl">📧</span>
+                            <a href="mailto:Timelinkx5@gmail.com" class="hover:underline">Timelinkx5@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">All Services</a></li>
+                        <li><a href="#packages" class="text-gray-400 hover:text-white transition">Packages</a></li>
+                        <li><a href="#why-us" class="text-gray-400 hover:text-white transition">Our Process</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Focus -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-3">Core Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Business Setup</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Visa & PRO Services</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Typing Center</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">MOFA Attestation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Working Hours -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-3">Working Hours</h4>
+                    <p class="text-gray-400 text-sm">
+                        Monday - Saturday<br>
+                        9:00 AM - 7:00 PM (GST)
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Time Link Business Setup Services LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle AND scroll animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // --- Mobile Menu Toggle ---
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Hide menu when a link is clicked
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // --- Scroll Animation Logic (Intersection Observer) ---
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        
+                        // 1. Basic reveal for single blocks (Headers, Stats, Footer)
+                        if (!target.hasAttribute('data-stagger-reveal')) {
+                             target.classList.add('is-visible');
+                        }
+                        
+                        // 2. Staggered reveal for grid elements (Cards, Packages, Testimonials)
+                        if (target.hasAttribute('data-stagger-reveal')) {
+                            const children = target.querySelectorAll(':scope > div');
+                            children.forEach((child, index) => {
+                                // Apply the base class for visibility
+                                child.classList.add('scroll-reveal');
+                                
+                                // Stagger the reveal of children with a small delay
+                                setTimeout(() => {
+                                    child.classList.add('is-visible');
+                                }, index * 120); // 120ms delay per child
+                            });
+                        }
+                        
+                        observer.unobserve(target);
+                    }
+                });
+            }, { 
+                threshold: 0.1, // Trigger when 10% of the element is visible
+                rootMargin: '0px 0px -100px 0px' // Start slightly earlier
+            });
+
+            // Target elements for animation
+            const animatedElements = document.querySelectorAll(
+                '.scroll-reveal, [data-stagger-reveal]'
+            );
+            
+            // Apply base class and observe the target container
+            animatedElements.forEach((element) => {
+                // If it's a stagger container, we observe the container itself.
+                // If it's a single element, we apply the base class and observe it.
+                if (element.hasAttribute('data-stagger-reveal')) {
+                    // Start observation for the container
+                    observer.observe(element);
+                } else {
+                    // Apply base class before observing for single elements
+                    element.classList.add('scroll-reveal');
+                    observer.observe(element);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
