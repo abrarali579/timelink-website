@@ -48,7 +48,7 @@
         }
         .hero-animate-1 { animation: fadeInSlide 1s ease-out 0.5s both; }
         .hero-animate-2 { animation: fadeInSlide 1s ease-out 0.8s both; }
-        .hero-animate-3 { animation: fadeInSlide 1s ease-out 1.1s both; }
+        .hero-animate-3 { animation: fadeInSlide 1s ease-out 1s both; }
     </style>
 </head>
 <body class="bg-white font-sans text-dark-gray">
@@ -81,40 +81,32 @@
     </nav>
 
     <main class="space-y-20 lg:space-y-32">
-        
-        <!-- SUCCESS BANNER (Shown by JavaScript if successful) -->
-        <div id="success-alert" class="hidden bg-green-500 text-white p-4 text-center font-semibold fixed top-0 left-0 w-full z-50 shadow-lg transition-opacity duration-500 ease-in-out">
-            Thank you! Your inquiry was successfully received. We will contact you within 2 business hours.
-        </div>
-
         <!-- 1. HERO SECTION & PRIMARY CTA -->
-        <section class="relative pt-16 md:pt-24 bg-accent-light" id="home">
+        <section class="relative pt-16 md:pt-24 *pb-40* bg-accent-light" id="home">
+             <!-- INCREASED MOBILE BOTTOM PADDING TO ACCOMMODATE FORM AND SVG CLIP -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 text-center lg:text-left py-10 lg:py-20 z-10">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-primary-blue mb-4 hero-animate-1">
-                        <span class="block">Company Formation Simplified</span>
-                        
+                        <span class="block">Your Future Starts Here:</span>
+                        UAE Company Formation Simplified
                     </h1>
                     <p class="text-xl text-dark-gray mb-8 lg:pr-10 hero-animate-2">
-                        Over 5 years of expertise in Business Set up, PRO Services, and All Typing Services in Dubai. Get your trade license and visa faster with Time Link.
+                        Over 10 years of expertise in Business Setup, PRO Services, and Expert Typing in Dubai. Get your trade license and visa faster with Time Link.
                     </p>
                     <a href="#contact" class="inline-block px-10 py-4 text-lg font-bold bg-primary-blue text-white rounded-full shadow-lg hover:bg-gray-800 transition cta-button mb-6 lg:mb-0 hero-animate-3">
                         Book Your FREE 30-Min Consultation
                     </a>
                 </div>
                 
-                <div class="lg:w-1/2 w-full p-6 lg:p-10 bg-white rounded-2xl shadow-2xl transform lg:translate-y-10 scroll-reveal">
+                <div class="lg:w-1/2 w-full p-6 lg:p-10 bg-white rounded-2xl shadow-2xl transform lg:translate-y-10 scroll-reveal z-20">
                     <h2 class="text-2xl font-bold text-primary-blue mb-4 text-center">Quick Setup Inquiry</h2>
                     
-                    <!-- NETLIFY & FORMSUBMIT INTEGRATION (Dual Submission) -->
-                    <!-- The action remains /success for Netlify capture + redirect.
-                         The FormSubmit hidden field ensures GUARANTEED email delivery. -->
+                    <!-- NETLIFY FORM INTEGRATION - Quick Inquiry Form (Functional) -->
                     <form name="QuickInquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success" class="space-y-4">
+                        <!-- ACTION points to the new /success.html page -->
+                        <!-- Honeypot for spam protection (hidden) -->
                         <input type="hidden" name="form-name" value="QuickInquiry" />
                         <div style="display:none;"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></div>
-
-                        <!-- HIDDEN FORMSUBMIT FIELD FOR GUARANTEED EMAIL -->
-                        <input type="hidden" name="_submission" value="Timelinkx5@gmail.com">
 
                         <input type="text" name="Full_Name" placeholder="Full Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
                         <input type="email" name="Email_Address" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-secondary-gold focus:border-secondary-gold">
@@ -132,13 +124,15 @@
                     </form>
                 </div>
             </div>
-            <svg class="absolute bottom-0 w-full h-20 sm:h-32" preserveAspectRatio="none" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Z-index fix for SVG -->
+            <svg class="absolute bottom-0 w-full h-20 sm:h-32 z-10" preserveAspectRatio="none" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,37.3C672,21,768,11,864,16C960,21,1056,32,1152,42.7C1248,53,1344,64,1392,69.3L1440,75L1440,100L1392,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z" fill="#FFFFFF"></path>
             </svg>
         </section>
 
         <!-- 2. CORE STATS / SOCIAL PROOF -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 mb-16 lg:mb-20">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 *mt-0* mb-16 lg:mb-20">
+            <!-- CRITICAL FIX: Removed negative margin (-mt-10) to stop clipping the form -->
             <h2 class="sr-only">Our Impact</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 scroll-reveal">
                 <div class="text-center p-3"><h3 class="text-3xl sm:text-5xl font-extrabold text-secondary-gold">3,200+</h3><p class="mt-1 text-sm sm:text-base font-semibold text-primary-blue">Clients Served</p></div>
@@ -299,34 +293,15 @@
         </div>
     </footer>
 
-    <!-- JavaScript for form success message and menu toggle -->
+    <!-- JavaScript for mobile menu toggle AND scroll animations -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile Menu Toggle
             const menuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
             menuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
             const mobileLinks = mobileMenu.querySelectorAll('a');
             mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
-
-            // --- Form Submission Success Logic ---
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('form_success') === 'true') {
-                const alertBanner = document.getElementById('success-alert');
-                alertBanner.classList.remove('hidden');
-
-                // Auto-hide the success banner after 5 seconds
-                setTimeout(() => {
-                    alertBanner.classList.add('hidden');
-                }, 5000);
-
-                // Clean the URL history so the banner doesn't reappear on refresh
-                // This replaces the URL from timelink.ae/?form_success=true to timelink.ae/
-                if (window.history.replaceState) {
-                    window.history.replaceState(null, null, window.location.pathname);
-                }
-            }
 
             // --- Scroll Animation Logic (Intersection Observer) ---
             const observer = new IntersectionObserver((entries, observer) => {
